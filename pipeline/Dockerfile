@@ -12,9 +12,9 @@ RUN uv sync --locked
 # it now points to the right Python from our venv, and does not use python from our host system
 # this ensures the dependencies in our docker are same as our host machine
 
-COPY pipeline.py .
+COPY ingest_data.py .
 
-ENTRYPOINT ["python", "pipeline.py" ]        
+ENTRYPOINT ["python", "ingest_data.py" ]        
 # tells Docker,whenever someone runs a container from this image, always start by running python pipeline.py.
 
 
